@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, Linking, Text, TouchableOpacity, View } from "react-native";
 
 interface NewsItem {
@@ -128,7 +128,7 @@ export default function Index() {
   }
 
   return (
-    <>
+    <React.Fragment>
       <Stack.Screen options={{ title: "首页" }} />
       <View style={{ flex: 1, paddingTop: 50 }}>
         <Text style={{ 
@@ -151,6 +151,6 @@ export default function Index() {
           ListFooterComponent={renderFooter}
         />
       </View>
-    </>
+    </React.Fragment>
   );
 }
